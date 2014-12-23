@@ -4,8 +4,46 @@
 </head>
 
 <body>
-	
 
+<!-- scopes -->
+<script>
+
+function foo(a){
+
+	 var b = a * 2; 
+
+	 function bar(c){
+	 	console.log(a,b,c);
+	 }
+
+	 bar(b*3);
+
+}
+
+foo(2);// 2,4,12
+
+// Eval : You can programatically generate code inside of your authored code, and run the generated code as if it had been there at author time
+
+function test_eval(str,a){
+
+	// "use strict";  
+
+	// if use "user string than console logs 1,2 "
+	//eval(..) when used in a strict-mode program operates in its own lexical scope, //which means declarations made inside of the eval() do not actually modify the //enclosing scope
+
+	console.log("TEST EVAL FUNCTION");
+
+	eval(str);
+	console.log(a,b);
+
+}
+
+var b = 2 ;
+
+test_eval("var b = 3 ;", 1); // 1,3
+//test_eval("alert('This Alert message was genrated ..')",2);
+
+</script>
 
 
 

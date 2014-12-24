@@ -43,8 +43,49 @@ var b = 2 ;
 test_eval("var b = 3 ;", 1); // 1,3
 //test_eval("alert('This Alert message was genrated ..')",2);
 
+
+// == WITH ======
+function test_with(obj){
+	with(obj){
+		a = 2;
+	}
+}
+
+
+var o1 = {
+    a: 3
+};
+
+var o2 = {
+    b: 3
+};
+
+console.log("==== WITH ===== ");
+
+test_with(o1);
+console.log(o1.a); // 2
+
+test_with(o2);
+console.log(o2.a); // undefined
+console.log(a); // 2 -- Oops, leaked global!
+
+//dont use eval() or "with", code will run slower as a result of using either feature. Don't use them
+
 </script>
 
+<script type="text/javascript" src="js/function_vs_block_scope.js"></script>
+<script type="text/javascript" src="js/global_namespace_example.js"></script>
+<script type="text/javascript" src="js/functions_as_scopes.js"></script>
+<script type="text/javascript" src="js/anonymous_named_funtions.js"></script>
+
+<script> 
+
+
+window.cool = MyReallyCoolLibrary;
+console.log(cool);
+
+
+</script>
 
 
 </body>

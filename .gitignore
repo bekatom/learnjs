@@ -1,0 +1,4 @@
+# exclude everything except directory foo/bar
+/learn_mongoose/node_modules/*
+/learn_mongoose/node_modules/
+/node_modules/*

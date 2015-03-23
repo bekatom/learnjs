@@ -6,11 +6,20 @@ var Cat = mongoose.model('Cat',
 	);
 
 var kitty = new Cat({ name: 'Zildjian' });
+var mycat  = new Cat( {
+	name : 'miu',
+	color : 'black'
+})
+
 
 
 kitty.save(function (err) {
   if (err) // ...
   console.log('meow');
+});
+
+mycat.save(function(err){
+
 });
 
 console.log("..........................")

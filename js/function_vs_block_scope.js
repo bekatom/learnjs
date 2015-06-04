@@ -1,15 +1,15 @@
 console.log("funtion vs block scope");
 
-function foo(a){
+function foo(a) {
 
-	var b = 2 ; 
+    var b = 2;
 
 
-	function bar(){
+    function bar() {
 
-	}
+    }
 
-	var c = 3 ;
+    var c = 3;
 
 
 }
@@ -23,9 +23,9 @@ function doSomething(a) {
 
     var b;
 
-    b = a + doSomethingElse( a * 2 ); // b = 2 + 3
+    b = a + doSomethingElse(a * 2); // b = 2 + 3
     console.log(b);
-    console.log( (b * 3) ); //5 * 3
+    console.log((b * 3)); //5 * 3
 }
 
 console.log(doSomething(2)); // 15

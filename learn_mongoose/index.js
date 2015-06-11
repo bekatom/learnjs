@@ -12,7 +12,7 @@ var mycat  = new Cat( {
 })
 
 
-
+// save into mongo database
 kitty.save(function (err) {
   if (err) // ...
   console.log('meow');

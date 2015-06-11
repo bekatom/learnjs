@@ -1,4 +1,4 @@
-// ფუნქციის გადაცემა როგორც პარამერად.
+// function as a parameter 
 
 function say(word){
 	console.log(word);
@@ -8,6 +8,9 @@ function execute(someFunction,value){
 	someFunction(value);
 }
 
-// აქ გადავცემთ ფუნქცია "say" როგორც პირველ პარამეტრს ფუნქცია "execute"-ს
-// რომელიც აბრუნებს თვითონ ფუნქცია "say"-ს .
+// first version , pass "say"" function as first parameter to function execute . 
+// that returns function "say"
 execute(say,'Hello');  
+
+// second version function as a parameter
+execute(function(word){ console.log('Function as a parameter + : ', word)},"Hello2");

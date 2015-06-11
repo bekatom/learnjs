@@ -13,4 +13,4 @@ function execute(someFunction,value){
 execute(say,'Hello');  
 
 // second version function as a parameter
-execute(function(word){ console.log('Function as a parameter + : ', word)},"Hello2");
+execute(function(word){ console.log('Function as a parameter + : ', word)}, "Hello2");
